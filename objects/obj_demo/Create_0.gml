@@ -62,7 +62,6 @@
 	current = demo_effects.bitcrusher;
 	
 	bus1.effects[0] = effects[current].effect;
-	audio_play_sound_on(e1, snd_sample, true, 1, 1.0);
 	
 	// set some defaults:
 	effects[demo_effects.reverb].effect.size = 0.7;
