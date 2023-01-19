@@ -5,7 +5,7 @@
 	audio_emitter_bus(e1, bus1);
 	
 	enum demo_effects {
-		reverb, delay, bitcrusher, lp, hp, gain
+		reverb, delay, bitcrusher, lp, hp, gain, tremolo
 	}
 	
 	effects = [
@@ -57,9 +57,17 @@
 				"gain"
 			],
 		},
+		// Tremolo
+		{
+			effect: audio_effect_create(AudioEffectType.Tremolo),
+			name: "Tremolo",
+			settings: [
+				"rate", "intensity", "offset", "shape"
+			],
+		},
 	];
 	
-	current = demo_effects.bitcrusher;
+	current = demo_effects.tremolo;
 	
 	bus1.effects[0] = effects[current].effect;
 	
@@ -82,5 +90,10 @@
 	effects[demo_effects.hp].effect.cutoff = 8000;
 	
 	effects[demo_effects.gain].effect.gain = 0.3;
+	
+	effects[demo_effects.tremolo].effect.rate = 16;
+	effects[demo_effects.tremolo].effect.intensity = 1;
+	effects[demo_effects.tremolo].effect.offset = 0.7;
+	effects[demo_effects.tremolo].effect.shape = 2;
 	
 	

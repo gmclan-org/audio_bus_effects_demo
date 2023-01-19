@@ -25,6 +25,10 @@
 		if (e == "resolution") _max = 16;
 		if (e == "factor" or e == "q") _max = 100;
 		if (e == "cutoff") _max = 20000;
+		if (e == "rate") _max = 20;
+		if (e == "intensity") _max = 1;
+		if (e == "offset") _max = 1;
+		if (e == "shape") _max = 4;
 		
 		_hover = false;
 		
@@ -45,6 +49,10 @@
 					var _step = (_max - _min) / 20;
 					if (e == "factor" or e == "resolution") _step = 1;
 					if (e == "cutoff") _step = 100;
+					if (e == "rate") _step = 0.1;
+					if (e == "intensity") _step = 0.1;
+					if (e == "offset") _step = 0.1;
+					if (e == "shape") _step = 1;
 					
 					var _newval = 0;
 					
@@ -73,6 +81,10 @@
 						case "resolution": effects[current].effect.resolution = _newval; break;
 						case "cutoff": effects[current].effect.cutoff = _newval; break;
 						case "q": effects[current].effect.q = _newval; break;
+						case "rate": effects[current].effect.rate = _newval; break;
+						case "intensity": effects[current].effect.intensity = _newval; break;
+						case "offset": effects[current].effect.offset = _newval; break;
+						case "shape": effects[current].effect.shape = _newval; break;
 					}
 					
 					//bus1.effects[0] = effects[current].effect;
