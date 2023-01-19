@@ -1,0 +1,9 @@
+{
+  "ResourceOrderSettings": [
+    {"name":"spr_slider","path":"sprites/spr_slider/spr_slider.yy","order":1,},
+    {"name":"snd_sample","path":"sounds/snd_sample/snd_sample.yy","order":2,},
+    {"name":"obj_demo","path":"objects/obj_demo/obj_demo.yy","order":3,},
+    {"name":"room_demo","path":"rooms/room_demo/room_demo.yy","order":4,},
+  ],
+  "FolderOrderSettings": [],
+}
